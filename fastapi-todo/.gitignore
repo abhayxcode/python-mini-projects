@@ -1,0 +1,64 @@
+# Python cache and compiled files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Virtual environment
+venv/
+env/
+# Editor and IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Dependency files
+*.egg-info/
+*.egg
+*.lock
+pip-log.txt
+
+# Tests and coverage reports
+htmlcov/
+.tox/
+.coverage
+coverage.xml
+*.cover
+.pytest_cache/
+
+# Build and distribution files
+build/
+dist/
+*.egg-info/
+
+# Docker
+*.env
+.env.*
+docker-compose.override.yml
+
+# Uvicorn/ASGI/WSGI
+*.pid
+
+# Secrets (if any)
+secrets.json
+*.key
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Python Bytecode and other
+__pycache__/
+*.py[cod]
+
+# FastAPI specific (if applicable)
+*.sqlite3
