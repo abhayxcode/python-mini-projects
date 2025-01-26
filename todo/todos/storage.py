@@ -1,8 +1,15 @@
 import json
+from pathlib import Path
+
+DATA_FILE= Path('data/todos.json')
 
 # Load all todos from json
 def load_from_json():
-   with open('data/todos.json' , 'r') as file:
+  if not DATA_FILE.exists():
+    DATA_FILE.parent.mkdir(parents=True, exist_ok=True)
+    DATA_FILE.write_text("[]") 
+
+  with open('data/todos.json' , 'r') as file:
     todos =  json.load(file)
     return todos
 
