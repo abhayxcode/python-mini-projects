@@ -1,10 +1,11 @@
+from fastapi import APIRouter
 from app.models.user import User, Signin_Schema
 from app.db.db import user_collection
 from fastapi.responses import JSONResponse
 import bcrypt 
 import jwt
 
-# Signup Function
+# --------- Signup Function ---------
 async def signup(user:User):   
   # check for duplicate user
   existing_user = await user_collection.find_one({"email" : user.email})
@@ -28,7 +29,7 @@ async def signup(user:User):
     )
 
 
-# Signin Function
+# --------- Signin Function ---------
 async def signin(user: Signin_Schema):
   # check if user exists
   existing_user = await user_collection.find_one({'email':user.email})
